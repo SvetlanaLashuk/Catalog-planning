@@ -1,0 +1,30 @@
+{
+  "menuItem"   : "MARKETING",
+  "submenuItem": "Publikationspflege",
+  "season"     : "40, Herbst/Winter 2015/2016",
+  "type"       : "Prospekt",
+  "publication": "6556 Schwarzpreis ET: 02.03.2017",
+  "nummer"     : "6556",
+  "enteredNummer": "45",
+  "typ"        : {
+    "option1": "Inszenierungspunkt",
+    "option2": "Prospekt"
+  },
+  "ET"         : "02.03.2017",
+  "enteredET" : "13.03.2017",
+  "preise"     : {
+    "option1": "Schwarzpreis",
+    "option2": "Reduziert"
+  },
+  "land": {
+    "option1": "Deutschland",
+    "option2": "Nicht definiert",
+    "option3": "Polen",
+    "option4": "Schweiz",
+    "option5": "Tschechische Republik",
+    "option6": "Ungarn",
+    "option7": "Österreich"
+  },
+  "kommentar": "heello",
+  "cancelWord": "Wurde gespeichert"
+}
