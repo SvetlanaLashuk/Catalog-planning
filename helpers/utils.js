@@ -1,15 +1,20 @@
-/**
- * @overview
- * @copyright     Copyright (c) PETER-SERVICE RnD, 2018.
- */
-
 class Utils {
+  /**
+   * Получает значение выбранного элемента
+   * @param element
+   * @returns {promise.Promise<string> | string}
+   */
   getValue(element) {
     return element.getAttribute('value');
   }
 
-  getOptionValue(element) {
-    return element.element(by.css('option:checked')).getText();
+  /**
+   * Получает выбранный пункт выпадающего списка
+   * @param element
+   * @returns {*}
+   */
+  getSelectedDropdownItem(element) {
+    return element.element(by.css('option:checked'));
   }
 }
 

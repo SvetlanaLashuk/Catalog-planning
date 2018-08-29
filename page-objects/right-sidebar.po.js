@@ -1,15 +1,9 @@
-/**
- * @overview
- * @copyright     Copyright (c) PETER-SERVICE RnD, 2018.
- */
-
 class Werberplanung {
+  static get cancelButtonSelector() { return '.btn-primary.fa.fa-undo'; }
+  static get textSelector()         { return '.cp-text-color '; }
 
-  static get cancelButtonSelector()  { return '.btn-primary.fa.fa-undo'; }
-  static get textSelector()          { return '.cp-text-color '; }
-
-  get buttonElement()        { return $(this.constructor.cancelButtonSelector); }
-  get textElement()          { return $(this.constructor.textSelector); }
+  get buttonElement() { return $(this.constructor.cancelButtonSelector); }
+  get textElement()   { return $(this.constructor.textSelector); }
 
   get numberElement() {
     return element(by.model('publication.name'));
@@ -35,8 +29,13 @@ class Werberplanung {
     return element(by.model('publication.description'));
   }
 
-   getOption (optionName) {
-     return $('[label="' + optionName + '"]').click();
+  /**
+   * Получает пункт выпадающего списка
+   * @param optionName
+   * @returns {ElementFinder}
+   */
+   getDropdownItem (optionName) {
+     return element(by.css('[label="' + optionName + '"]'));
   }
 }
 

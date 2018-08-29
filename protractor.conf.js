@@ -1,8 +1,3 @@
-/**
- * @overview
- * @copyright     Copyright (c) PETER-SERVICE RnD, 2018.
- */
-
 exports.config = {
   onPrepare: function () {
     browser.driver.manage().window().maximize();
