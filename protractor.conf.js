@@ -6,7 +6,7 @@ exports.config = {
   capabilities: {
     browserName: 'chrome'
   },
-  specs: ['e2e-spec/puc-marketing.e2e-spec.js'],
+  specs: ['e2e-spec/*e2e-spec.js'],
   jasmineNodeOpts: {
     showColors: true,
   }

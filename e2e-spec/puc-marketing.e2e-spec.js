@@ -4,13 +4,12 @@ describe('PuC.Marketing testing', function () {
         werberplanung = require("../page-objects/right-sidebar.po.js"),
         utils         = require("../helpers/utils.js"),
         title         = require("../page-objects/title.po.js"),
-        data          = require("../helpers/data.json"),
-        EC            = protractor.ExpectedConditions;
+        data          = require("../helpers/marketing.json");
   beforeEach(function () {
     browser.get('http://localhost:8080/catalog-planning/#/productionsEditor');
   });
 
-  it('Tests whether necessary form is displayed', function (done) {
+  it('Tests whether PuC.Marketing Publikationspflege form is displayed', function (done) {
     sidebar.waitForSidebarDisplayed();
     sidebar.chooseMenuItem(data.menuItem, data.submenuItem);
     title.titleElement.getText().then(function (text) {

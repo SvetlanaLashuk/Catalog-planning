@@ -2,7 +2,7 @@ class Utils {
   /**
    * Получает значение выбранного элемента
    * @param element
-   * @returns {promise.Promise<string> | string}
+   * @returns {promise.Promise<string>}
    */
   getValue(element) {
     return element.getAttribute('value');
