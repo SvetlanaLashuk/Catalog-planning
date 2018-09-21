@@ -1,7 +1,10 @@
-describe("STAMMDATEN-Saisons form", function () {
+/**
+ * @overview Спецификация для тестирования формы STAMMDATEN Saisons
+ */
+describe("STAMMDATEN Saisons form", function () {
   const sidebar    = require("../page-objects/left-sidebar.po.js"),
-        saisonForm = require("../page-objects/saison-form.po.js"),
-        saison     = require("../page-objects/saison.po"),
+        seasonForm = require("../page-objects/season-form.po.js"),
+        season     = require("../page-objects/season.po"),
         utils      = require("../helpers/utils.js"),
         title      = require("../page-objects/title.po.js"),
         data       = require("../helpers/stammdaten-saisons.json");
@@ -10,9 +13,11 @@ describe("STAMMDATEN-Saisons form", function () {
   });
 
   it("Tests whether form PuC.Marketing Saisons is displayed", function (done) {
-    sidebar.waitForSidebarDisplayed();
-    sidebar.chooseMenuItem(data.menuItem, data.submenuItem);
-    title.titleElement.getText().then(function (text) {
+    sidebar.waitForSidebarDisplayed().then(function () {
+      return sidebar.chooseMenuItem(data.menuItem, data.submenuItem);
+    }).then(function () {
+      return title.titleElement.getText();
+    }).then(function (text) {
       expect(text).toEqual(data.submenuItem);
     }).then(function () {
       done();
@@ -20,26 +25,30 @@ describe("STAMMDATEN-Saisons form", function () {
   });
 
   it("Checks whether fields have necessary values", function (done) {
-    sidebar.waitForSidebarDisplayed();
-    sidebar.chooseMenuItem(data.menuItem, data.submenuItem);
-    saisonForm.waitForSeasonFormDisplayed();
-    saisonForm.chooseSeason("Herbst/Winter 2012/2013");
-    utils.getValue(saison.name).then(function (name) {
+    sidebar.waitForSidebarDisplayed().then(function () {
+      return sidebar.chooseMenuItem(data.menuItem, data.submenuItem);
+    }).then(function () {
+      return seasonForm.waitForSeasonFormDisplayed();
+    }).then(function () {
+      return seasonForm.chooseSeason(data.seasonType);
+    }).then(function () {
+      return utils.getValue(season.name);
+    }).then(function (name) {
       expect(name).toBe(data.seasonName);
     }).then(function () {
-      return utils.getValue(saison.saisontyp);
+      return utils.getValue(season.seasonType);
     }).then(function (type) {
-      expect(type).toBe(data.saisontyp);
+      expect(type).toBe(data.seasonType);
     }).then(function () {
-      return utils.getValue(saison.startdatum);
+      return utils.getValue(season.startDate);
     }).then(function (startDate) {
-      expect(startDate).toBe(data.startdatum);
+      expect(startDate).toBe(data.startDate);
     }).then(function () {
-      return utils.getValue(saison.enddatum);
+      return utils.getValue(season.endDate);
     }).then(function (endDate) {
-      expect(endDate).toBe(data.enddatum);
+      expect(endDate).toBe(data.endDate);
     }).then(function () {
       done();
-    })
+    });
   });
 });

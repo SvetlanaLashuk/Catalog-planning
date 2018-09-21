@@ -1,3 +1,6 @@
+/**
+ * Page Object названия формы
+ */
 class Title {
   static get titleSelector() { return 'applicationTitle'; }
 

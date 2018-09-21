@@ -4,19 +4,19 @@
   "season"       : "40, Herbst/Winter 2015/2016",
   "type"         : "Prospekt",
   "publication"  : "6556 Schwarzpreis ET: 02.03.2017",
-  "nummer"       : "6556",
-  "enteredNummer": "45",
+  "number"       : "6556",
+  "enteredNumber": "45",
   "typ"          : {
     "option1"    : "Inszenierungspunkt",
     "option2"    : "Prospekt"
   },
-  "ET"           : "02.03.2017",
-  "enteredET"    : "13.03.2017",
-  "preise"       : {
+  "date"         : "02.03.2017",
+  "enteredDate"  : "13.03.2017",
+  "price"        : {
     "option1"    : "Schwarzpreis",
     "option2"    : "Reduziert"
   },
-  "land": {
+  "country"      : {
     "option1"    : "Deutschland",
     "option2"    : "Nicht definiert",
     "option3"    : "Polen",
@@ -25,6 +25,6 @@
     "option6"    : "Ungarn",
     "option7"    : "Österreich"
   },
-  "kommentar"    : "heello",
+  "comment"      : "hello",
   "cancelWord"   : "Wurde gespeichert"
 }

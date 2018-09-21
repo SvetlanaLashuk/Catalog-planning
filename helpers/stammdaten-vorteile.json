@@ -1,0 +1,11 @@
+{
+  "menuItem"   : "STAMMDATEN",
+  "submenuItem": "Vorteile",
+  "lineName"   : "VR_2",
+  "enteredName": "Test_create",
+  "editedName" : "Test_edit",
+  "button"     : {
+    "name1"    : "Anlegen",
+    "name2"    : "Ja"
+  }
+}

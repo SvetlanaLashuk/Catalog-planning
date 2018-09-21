@@ -11,10 +11,19 @@ class Utils {
   /**
    * Получает выбранный пункт выпадающего списка
    * @param element
-   * @returns {*}
+   * @returns {ElementFinder}
    */
   getSelectedDropdownItem(element) {
     return element.element(by.css('option:checked'));
+  }
+
+  /**
+   * Клик по элементу
+   * @param element
+   * @returns {promise.Promise<void>}
+   */
+  click(element) {
+    return element.click();
   }
 }
 
